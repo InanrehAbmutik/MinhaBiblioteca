@@ -550,6 +550,7 @@ namespace MyLib
 
         public static String Extenso(Decimal valor, string moeda)
         {
+            string erro;
             try
             {
                 String de = " de " + moeda + " ";
@@ -566,9 +567,9 @@ namespace MyLib
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                erro = ex.Message;
             }
-            return string.Empty;
+            return erro;
         }
 
         public static String Extenso(Decimal valor)
